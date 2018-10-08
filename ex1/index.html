@@ -17,7 +17,50 @@
                 Filtros de texto: {{"JV4N" | lowercase}}
                 <br>
                 Filtros de texto: {{"JV4N" | uppercase}}
+                <br>
+                Filtros de moneda: {{ 1350 }}
+                <br>
+                Filtros de moneda: {{1350 | currency}}
+                <br>
+                Filtros de moneda: {{1350 | currency: '€ '}}
+                <br>
+                Filtros de moneda: {{1350 | number}}
             </p>
+            <hr>
+            <p>
+                Su nombre:
+                <br>
+                <input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre">
+                <br>
+                <input type="checkbox" ng-model="opt1"> Opción 1
+                <br>
+                <input type="checkbox" ng-model="opt2"> Opción 2
+                <br>
+                Seleccione el género:
+                <br>
+                <input type="radio" value="M" ng-model="genero"> Masculino
+                <input type="radio" value="F" ng-model="genero"> Femenino
+                <hr>
+                
+                Tu nombre es: {{nombre}}
+                <br>
+                Y en mayusculas es: {{nombre | uppercase}}
+                <br>
+                El genero es: {{genero}}
+                <br>
+                <br>
+                Opciones: 
+                <ul>
+                    <li>Opción 1: {{opt1}}</li>
+                    <li>Opción 2: {{opt2}}</li>
+                </ul> 
+            </p>
+            <hr>
+            <p>
+                <input type="radio" value="M"> Masculino
+                <input type="radio" value="F"> Femenino
+            </p>
+            <hr>
         </div>
     </body>
 </html>
