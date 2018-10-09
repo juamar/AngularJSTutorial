@@ -7,6 +7,25 @@ var profesorData = {
 	foto: "img/juancarlos.jpg"
 }
 
-app.controller('profesorCtrl', function(){
-    this.profesor=profesorData;
+app.controller('profesorCtrl', function($scope){
+	$scope.profesor = profesorData;
+	$scope.editando = {};
+	$scope.mostrandoEdit = false;
+
+	angular.copy( $scope.profesor, $scope.editando );
+
+	$scope.editarProfesor = function()
+	{
+		angular.copy( $scope.editando, $scope.profesor );
+	}
+
+	$scope.cancelarProfesor = function()
+	{
+		angular.copy( $scope.profesor, $scope.editando );
+	}
+
+	$scope.mostrarEdit = function()
+	{
+		$scope.mostrandoEdit = !$scope.mostrandoEdit;
+	}
 });
